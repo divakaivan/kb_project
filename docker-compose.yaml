@@ -1,0 +1,123 @@
+networks:
+  bridge:
+    driver: bridge
+
+services:
+  neo4j:
+    container_name: neo4j
+    image: neo4j:latest
+    ports:
+      - 7474:7474
+      - 7687:7687
+    environment:
+      - NEO4J_AUTH=neo4j/password
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_import_file_use__neo4j__config=true
+      - NEO4J_PLUGINS=["apoc", "graph-data-science"]
+    volumes:
+      - ./neo4j_db/data:/data
+      - ./neo4j_db/logs:/logs
+      - ./neo4j_db/import:/var/lib/neo4j/import
+      - ./neo4j_db/plugins:/plugins
+    networks:
+      bridge:
+        aliases:
+          - neo4j
+
+  magic:
+    image: mageai/mageai:latest
+    command: mage start ${PROJECT_NAME}
+    env_file:
+      - .env
+    build:
+      context: ./mage_orchestration
+      dockerfile: Dockerfile
+    environment:
+      USER_CODE_PATH: /home/src/${PROJECT_NAME}
+      MLFLOW_TRACKING_URI: http://mlflow-server:5000
+    ports:
+      - 6789:6789
+    volumes:
+      - ./mage_orchestration:/home/src/
+    restart: on-failure:5
+    networks:
+      bridge:
+        aliases:
+          - magic
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    env_file:
+      - .env
+    networks:
+      bridge:
+        aliases:
+          - zookeeper
+  
+  kafka:
+    image: confluentinc/cp-kafka
+    depends_on:
+      - zookeeper
+    env_file:
+      - .env
+    networks:
+      bridge:
+        aliases:
+          - kafka
+
+  kafka-producer:
+    container_name: kafka-producer
+    build:
+      context: ./kafka-producer
+      dockerfile: Dockerfile
+    environment:
+      - KAFKA_SERVER=kafka:9093
+      - ZOOKEPER_SERVER=zookeeper:2181
+    depends_on:
+      - kafka
+      - zookeeper
+      - neo4j
+    networks:
+      bridge:
+        aliases:
+          - kafka-producer
+
+  mlflow-server:
+    build:
+      context: ./mlflow
+      dockerfile: Dockerfile
+    container_name: mlflow-server
+    ports:
+      - "5001:5001"
+    environment:
+      MLFLOW_TRACKING_URI: http://0.0.0.0:5001
+    command:
+      - /bin/sh
+      - -c
+      - |
+        mlflow server --backend-store-uri sqlite:///mlflow.db --host 0.0.0.0 --port 5001
+    networks:
+      bridge:
+        aliases:
+          - mlflow-server
+
+  grafana:
+    image: grafana/grafana:latest
+    environment: 
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_FEATURE_TOGGLES_ENABLE=ngalert
+      - GF_INSTALL_PLUGINS=https://github.com/denniskniep/grafana-datasource-plugin-neo4j/releases/download/v1.3.2/kniepdennis-neo4j-datasource-1.3.2.zip;kniepdennis-neo4j-datasource
+    volumes:
+      - ./grafana/provisioning/:/opt/grafana/provisioning/
+      - ./grafana/dashboards/:/opt/grafana/dashboards
+    ports:
+      - 3000:3000
+    networks:
+      bridge:
+        aliases:
+          - grafana
+
+volumes:
+  grafana:
