@@ -1,7 +1,5 @@
-# Define variables
 DOCKER_COMPOSE_FILE=docker-compose.yaml
 
-# Default target when `make` is run without arguments
 .DEFAULT_GOAL := help
 
 .PHONY: help
@@ -20,6 +18,10 @@ build:  ## Build docker services
 .PHONY: start
 start:  ## Start docker services (detached mode)
 	docker-compose -f $(DOCKER_COMPOSE_FILE) up -d
+
+.PHONY: model-dict
+model-dict:  ## Generate model dictionary
+	pip install -r model-dict/requirements.txt --quiet && streamlit run model-dict/app.py
 
 .PHONY: stop
 stop:  ## Stop docker services
