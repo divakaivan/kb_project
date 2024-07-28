@@ -1,5 +1,4 @@
 dev/*
-mage_orchestration/models_*/*.pth
 mage_orchestration/datasets
 neo4j_db
 kafka-producer/data_to_stream.csv
