@@ -1,9 +1,9 @@
 dev/*
 mage_orchestration/models_*/*.pth
 mage_orchestration/datasets
-pipelines
 neo4j_db
 kafka-producer/data_to_stream.csv
+mage_orchestration/kaggle.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
