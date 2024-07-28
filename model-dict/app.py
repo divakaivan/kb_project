@@ -11,21 +11,21 @@ models = {
         "location": "mage_orchestration/models_20240728_050159",
         "images": [
             {
-                "path": "mage_orchestration/models_20240728_050159/conf_matrix.png",
+                "path": "/conf_matrix.png",
                 "title": "Confusion Matrix"
             },
             {
-                "path": "mage_orchestration/models_20240728_050159/feature_importance.png",
+                "path": "/feature_importance.png",
                 "title": "Feature Importance"
             }
         ],
         "text_files": [
             {
-                "path": "mage_orchestration/models_20240728_050159/model_summary.txt",
+                "path": "/model_summary.txt",
                 "title": "Summary"
             },
             {
-                "path": "mage_orchestration/models_20240728_050159/metrics.txt",
+                "path": "/metrics.txt",
                 "title": "Metrics"
             }
         ]
@@ -41,8 +41,8 @@ st.markdown(f"### Location \n{model_info['location']}")
 
 for text_file in model_info["text_files"]:
     st.markdown(f"### {text_file['title']}")
-    st.code(load_text(text_file["path"]))
+    st.code(load_text(model_info['location']+text_file["path"]))
 
 for image in model_info["images"]:
     st.markdown(f"### {image['title']}")
-    st.image(image["path"])
+    st.image(model_info['location']+image["path"])
