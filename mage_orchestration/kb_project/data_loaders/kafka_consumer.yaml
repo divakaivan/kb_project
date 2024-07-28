@@ -1,0 +1,6 @@
+connector_type: kafka
+bootstrap_server: "kafka:9092"
+topic: test
+consumer_group: unique_consumer_group
+include_metadata: false
+api_version: 0.10.2

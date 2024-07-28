@@ -1,0 +1,42 @@
+version: 0.1.1
+default:
+  GOOGLE_SERVICE_ACC_KEY_FILEPATH: "/path/to/your/service/account/key.json"
+  GOOGLE_LOCATION: US # Optional
+  # MongoDB
+  # Specify either the connection string or the (host, password, user, port) to connect to MongoDB.
+  MONGODB_CONNECTION_STRING: "mongodb://{username}:{password}@{host}:{port}/"
+  MONGODB_HOST: host
+  MONGODB_PORT: 27017
+  MONGODB_USER: user
+  MONGODB_PASSWORD: password
+  MONGODB_DATABASE: database
+  MONGODB_COLLECTION: collection
+  # MSSQL
+  MSSQL_DATABASE: database
+  MSSQL_SCHEMA: schema
+  MSSQL_DRIVER: "ODBC Driver 18 for SQL Server"
+  MSSQL_HOST: host
+  MSSQL_PASSWORD: password
+  MSSQL_PORT: 1433
+  MSSQL_USER: SA
+  # MySQL
+  MYSQL_DATABASE: database
+  MYSQL_HOST: host
+  MYSQL_PASSWORD: password
+  MYSQL_PORT: 3306
+  MYSQL_USER: root
+  # Pinot
+  PINOT_HOST: hostname
+  PINOT_PASSWORD: password
+  PINOT_PATH: /query/sql
+  PINOT_PORT: 8000
+  PINOT_SCHEME: http
+  PINOT_USER: user
+  # PostgresSQL
+  POSTGRES_CONNECT_TIMEOUT: 10
+  POSTGRES_DBNAME: postgres
+  POSTGRES_SCHEMA: public # Optional
+  POSTGRES_USER: username
+  POSTGRES_PASSWORD: password
+  POSTGRES_HOST: hostname
+  POSTGRES_PORT: 5432
