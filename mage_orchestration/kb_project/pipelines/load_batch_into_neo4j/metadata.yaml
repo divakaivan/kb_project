@@ -10,7 +10,7 @@ blocks:
   language: python
   name: load_from_local
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: data_loader
   upstream_blocks: []
