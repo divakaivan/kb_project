@@ -1,0 +1,525 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 2,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "kniepdennis-neo4j-datasource",
+        "uid": "adt0ai4d35534a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "11.1.1",
+      "targets": [
+        {
+          "Format": "table",
+          "cypherQuery": "MATCH ()-[r:TRANSACTION]->()\nWITH r, \n     substring(r.trans_time, 0, 10) AS datePart, // Extract 'YYYY-MM-DD'\n     substring(r.trans_time, 11, 8) AS timePart  // Extract 'HH:MM:SS'\nWITH r, \n     datePart + 'T' + timePart AS isoDateTime  // Combine into ISO 8601 format\nRETURN r.trans_num AS TransactionNumber, \n       r.trans_date_trans_time AS TransactionDateTime, \n       r.amt AS Amount, \n       r.category AS Category, \n       r.is_fraud AS IsFraud,\n       r.pred_gcn_is_fraud AS PredictedIsFraud\nORDER BY r.trans_date_trans_time DESC\nLIMIT 100\n",
+          "datasource": {
+            "type": "kniepdennis-neo4j-datasource",
+            "uid": "adt0ai4d35534a"
+          },
+          "hide": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Latest Transactions",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "kniepdennis-neo4j-datasource",
+        "uid": "adt0ai4d35534a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 6,
+        "x": 0,
+        "y": 6
+      },
+      "id": 3,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": false
+        },
+        "orientation": "horizontal",
+        "showValue": "never",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "targets": [
+        {
+          "cypherQuery": "MATCH ()-[t:TRANSACTION]->(m:Merchant)\nRETURN m.name AS MerchantName, COUNT(t) AS TransactionCount\nORDER BY TransactionCount DESC\nLIMIT 10\n",
+          "datasource": {
+            "type": "kniepdennis-neo4j-datasource",
+            "uid": "adt0ai4d35534a"
+          },
+          "hide": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Merchants by Transaction Volume",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "kniepdennis-neo4j-datasource",
+        "uid": "adt0ai4d35534a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "sishort"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 6,
+        "y": 6
+      },
+      "id": 6,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.1.1",
+      "targets": [
+        {
+          "cypherQuery": "MATCH ()-[r:TRANSACTION]->()\nRETURN \n  SUM(CASE WHEN r.is_fraud = 0 THEN 1 ELSE 0 END) AS Not_Fraud_cases,\n  SUM(CASE WHEN r.is_fraud = 1 THEN 1 ELSE 0 END) AS Fraud_cases\n  \n",
+          "datasource": {
+            "type": "kniepdennis-neo4j-datasource",
+            "uid": "adt0ai4d35534a"
+          },
+          "hide": false,
+          "refId": "A"
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "kniepdennis-neo4j-datasource",
+        "uid": "adt0ai4d35534a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 12,
+        "x": 12,
+        "y": 6
+      },
+      "id": 5,
+      "options": {
+        "basemap": {
+          "config": {},
+          "name": "Layer 0",
+          "type": "default"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": false,
+          "showMeasure": true,
+          "showScale": true,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "blur": 11,
+              "radius": 6,
+              "weight": {
+                "field": "TransactionCount",
+                "fixed": 1,
+                "max": 1,
+                "min": 0
+              }
+            },
+            "location": {
+              "mode": "auto"
+            },
+            "name": "Layer 1",
+            "opacity": 1,
+            "tooltip": false,
+            "type": "heatmap"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "north-america",
+          "lat": 40,
+          "lon": -100,
+          "zoom": 4
+        }
+      },
+      "pluginVersion": "11.1.1",
+      "targets": [
+        {
+          "cypherQuery": "MATCH (m:Merchant)<-[d:TRANSACTION {is_fraud: 1}]-(t)\nRETURN m.name AS MerchantName, \n       m.merch_lat AS Latitude, \n       m.merch_long AS Longitude, \n       d.is_fraud AS isFraud,\n       COUNT(t) AS TransactionCount\n",
+          "datasource": {
+            "type": "kniepdennis-neo4j-datasource",
+            "uid": "adt0ai4d35534a"
+          },
+          "hide": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Fraud Transactions Geomap",
+      "type": "geomap"
+    },
+    {
+      "datasource": {
+        "type": "kniepdennis-neo4j-datasource",
+        "uid": "adt0ai4d35534a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 6,
+        "x": 6,
+        "y": 10
+      },
+      "id": 7,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": false
+        },
+        "orientation": "horizontal",
+        "showValue": "never",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "targets": [
+        {
+          "cypherQuery": "MATCH ()-[t:TRANSACTION]->()\nWITH t.amt AS TransactionAmount\n// Define the bin ranges and assign an order key\nWITH CASE\n    WHEN TransactionAmount <= 10 THEN '0-10'\n    WHEN TransactionAmount <= 20 THEN '11-20'\n    WHEN TransactionAmount <= 30 THEN '21-30'\n    WHEN TransactionAmount <= 40 THEN '31-40'\n    WHEN TransactionAmount <= 50 THEN '41-50'\n    WHEN TransactionAmount <= 100 THEN '51-100'\n    WHEN TransactionAmount <= 1000 THEN '101-1000'\n    WHEN TransactionAmount <= 5000 THEN '1001-5000'\n    ELSE '5000+'\nEND AS BinRange,\nCASE\n    WHEN TransactionAmount <= 10 THEN 1\n    WHEN TransactionAmount <= 20 THEN 2\n    WHEN TransactionAmount <= 30 THEN 3\n    WHEN TransactionAmount <= 40 THEN 4\n    WHEN TransactionAmount <= 50 THEN 5\n    WHEN TransactionAmount <= 100 THEN 6\n    WHEN TransactionAmount <= 1000 THEN 7\n    WHEN TransactionAmount <= 5000 THEN 8\n    ELSE 9\nEND AS BinOrder\n// Aggregate and count transactions by bin\nWITH BinRange, BinOrder, COUNT(*) AS TransactionCount\n// Order by BinOrder in a subsequent WITH clause\nRETURN BinRange, TransactionCount\nORDER BY BinOrder\nLIMIT 1000\n",
+          "datasource": {
+            "type": "kniepdennis-neo4j-datasource",
+            "uid": "adt0ai4d35534a"
+          },
+          "hide": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Transaction Amount Distribution",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "kniepdennis-neo4j-datasource",
+        "uid": "adt0ai4d35534a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 0,
+        "y": 16
+      },
+      "id": 4,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "11.1.1",
+      "targets": [
+        {
+          "cypherQuery": "MATCH ()-[t:TRANSACTION {is_fraud: 1}]->(m:Merchant)\nRETURN m.name AS MerchantName, COUNT(t) AS FraudulentTransactionCount\nORDER BY FraudulentTransactionCount DESC",
+          "datasource": {
+            "type": "kniepdennis-neo4j-datasource",
+            "uid": "adt0ai4d35534a"
+          },
+          "hide": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Fraudulent Transactions by Merchant",
+      "type": "table"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 39,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Transactions Dashboard Copy",
+  "uid": "ddt0i8avxlm2od",
+  "version": 3,
+  "weekStart": ""
+}
