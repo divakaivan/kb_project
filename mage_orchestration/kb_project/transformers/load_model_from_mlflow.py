@@ -36,7 +36,7 @@ class GCN(torch.nn.Module):
         return F.log_softmax(x, dim=1)
 
 model = GCN()
-model_path = 'models_20240728_045529/gcn.pth'
+model_path = 'models_20240728_050159/gcn.pth' # can replace with mlflow if setup
 model.load_state_dict(torch.load(model_path))
 model.eval()
 
