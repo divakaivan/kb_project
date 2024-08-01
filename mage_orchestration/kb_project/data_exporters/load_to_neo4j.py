@@ -63,6 +63,9 @@ def insert_data_in_neo4j(df, driver):
 
 @data_exporter
 def export_data(data, *args, **kwargs):
+
+    data['merchant'] = data['merchant'].str.replace('fraud_', '')
+
     uri = "bolt://neo4j:7687"
     driver = create_driver(uri, "neo4j", "password")
 
