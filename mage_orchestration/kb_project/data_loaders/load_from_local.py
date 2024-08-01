@@ -11,8 +11,8 @@ if 'test' not in globals():
 def load_data_from_file(*args, **kwargs):
 
     filepath = 'datasets/fraudTrain.csv'
-    df = pd.read_csv(filepath, index_col=0)
-    return df
+    data = pd.read_csv(filepath, index_col=0)
+    return data
 
 
 @test
