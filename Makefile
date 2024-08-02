@@ -20,7 +20,7 @@ start:  ## Start docker services (detached mode)
 	docker-compose -f $(DOCKER_COMPOSE_FILE) up -d
 
 .PHONY: model-dict
-model-dict:  ## Generate model dictionary
+model-dict:  ## Create model dictionary UI
 	pip install -r model-dict/requirements.txt --quiet && streamlit run model-dict/app.py
 
 .PHONY: stop
