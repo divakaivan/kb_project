@@ -105,7 +105,7 @@ def transform(data, *args, **kwargs):
     selected_edges = [(int(row[0]), int(row[1])) for row in edge_index if row[2] > mean_]
     edge_index_selected = torch.tensor(selected_edges, dtype=torch.long).t()
     
-    category_dummies = pd.get_dummies(balanced_df['category'], drop_first=True)
+    category_dummies = pd.get_dummies(balanced_df['category'], drop_first=True, prefix='cat')
     balanced_df = pd.concat([balanced_df, category_dummies], axis=1)
 
     features = balanced_df[['lat', 'long', 'amt', 'merch_lat', 'merch_long', *category_dummies.columns]].values

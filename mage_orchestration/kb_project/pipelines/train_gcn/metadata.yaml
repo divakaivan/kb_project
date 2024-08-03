@@ -28,7 +28,7 @@ blocks:
   language: python
   name: full_model_script
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: transformer
   upstream_blocks:
