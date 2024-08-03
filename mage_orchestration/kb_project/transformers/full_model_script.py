@@ -120,7 +120,7 @@ def transform(data, *args, **kwargs):
     losses = []
     
     with mlflow.start_run():
-        mlflow.pytorch.autolog()
+        
         model = GCN()
         lr = 0.003
         weight_decay = 5e-4

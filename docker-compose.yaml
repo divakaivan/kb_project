@@ -92,6 +92,8 @@ services:
       - "5001:5001"
     environment:
       MLFLOW_TRACKING_URI: http://0.0.0.0:5001
+    volumes:
+      - ./mlflow:/mlflow
     command:
       - /bin/sh
       - -c
