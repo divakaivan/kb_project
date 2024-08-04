@@ -6,7 +6,7 @@ blocks:
     file_source:
       path: data_loaders/kafka_consumer.yaml
   downstream_blocks:
-  - load_model_from_mlflow
+  - make_preds
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -20,21 +20,23 @@ blocks:
   uuid: kafka_consumer
 - all_upstream_blocks_executed: false
   color: null
-  configuration: {}
+  configuration:
+    file_source:
+      path: transformers/make_preds.py
   downstream_blocks:
   - export_preds_to_neo4j
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: load_model_from_mlflow
+  name: make_preds
   retry_config: null
   status: updated
   timeout: null
   type: transformer
   upstream_blocks:
   - kafka_consumer
-  uuid: load_model_from_mlflow
+  uuid: make_preds
 - all_upstream_blocks_executed: false
   color: null
   configuration: {}
@@ -49,7 +51,7 @@ blocks:
   timeout: null
   type: data_exporter
   upstream_blocks:
-  - load_model_from_mlflow
+  - make_preds
   uuid: export_preds_to_neo4j
 cache_block_output_in_memory: false
 callbacks: []
