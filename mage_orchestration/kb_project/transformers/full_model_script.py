@@ -9,8 +9,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.utils import resample
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, accuracy_score, precision_score, recall_score, f1_score
 
 import mlflow
 from torchsummary import summary
@@ -56,6 +55,13 @@ def compute_time_difference(group):
             result.append([group.iloc[i].name, group.iloc[j].name, time_difference])
     return result
 
+def create_folder(name):
+    date_now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    folder_name = f"models_{name}_{date_now}"
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)
+    return folder_name
+
 @transformer
 def transform(data, *args, **kwargs):
     credit_card_nodes, merchant_nodes, transactions = data
@@ -75,7 +81,7 @@ def transform(data, *args, **kwargs):
             random_state=42
         )
     balanced_df = pd.concat([fraud_rows, non_fraud_downsampled])
-    balanced_df = balanced_df.reset_index()
+    balanced_df = balanced_df.reset_index(drop=True)
 
     balanced_df_train, balanced_df_test = train_test_split(balanced_df, test_size=0.25, random_state=42)
 
@@ -141,9 +147,7 @@ def transform(data, *args, **kwargs):
             optimizer.step()
 
         # Save model
-        now = datetime.now().strftime("%Y%m%d_%H%M%S")
-        save_path = f'models_{now}'
-        os.makedirs(save_path)
+        save_path = create_folder('gcn')
         model_path = f'{save_path}/gcn.pth'
         torch.save(model.state_dict(), model_path)
         print('Model saved!')
