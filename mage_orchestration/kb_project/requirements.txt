@@ -1,0 +1,9 @@
+kaggle
+torch
+torch-geometric
+neo4j
+matplotlib
+pandas
+numpy
+mlflow==1.30.0
+boto3==1.26.8

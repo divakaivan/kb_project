@@ -1,0 +1,81 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: data_loaders/kafka_consumer.yaml
+    file_source:
+      path: data_loaders/kafka_consumer.yaml
+  downstream_blocks:
+  - make_preds
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: kafka_consumer
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: kafka_consumer
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_source:
+      path: transformers/make_preds.py
+  downstream_blocks:
+  - export_preds_to_neo4j
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: make_preds
+  retry_config: null
+  status: updated
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - kafka_consumer
+  uuid: make_preds
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_preds_to_neo4j
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - make_preds
+  uuid: export_preds_to_neo4j
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-07-21 11:14:14.613052+00:00'
+data_integration: null
+description: Receive transactions from kafka -> Predict fraud/not fraud -> Send to
+  Neo4j
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: stream_predictions
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags:
+- inference-pipeline
+type: streaming
+uuid: stream_predictions
+variables_dir: /home/src/mage_data/kb_project
+widgets: []

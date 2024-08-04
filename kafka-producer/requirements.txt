@@ -1,0 +1,4 @@
+kafka-python==2.0.2
+numpy==2.0.1
+pandas==2.2.2
+schedule==1.2.2

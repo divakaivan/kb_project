@@ -1,0 +1,586 @@
+amt: 56.578227741611485
+category_food_dining: 3.8138748113197205
+category_gas_transport: 9.650136132715275
+category_grocery_net: 1.2422974845340296
+category_grocery_pos: 2.7986099587833437
+category_health_fitness: 1.0757139460574685
+category_home: 3.2212092398179077
+category_kids_pets: 1.4536959735595638
+category_misc_net: 1.6552226489769855
+category_misc_pos: 1.3404240134238685
+category_personal_care: 1.0643446776736434
+category_shopping_net: 2.5016911990005695
+category_shopping_pos: 3.1260526956903676
+category_travel: 0.6026017286606309
+state_AL: 0.0
+state_AR: 0.0065476544214992044
+state_AZ: 0.0
+state_CA: 0.0
+state_CO: 0.002946957562899429
+state_CT: 0.00019999095422097498
+state_DC: 0.0039360361898740205
+state_DE: 0.00016376545812160585
+state_FL: 0.05332136448348226
+state_GA: 0.0
+state_HI: 0.010685868375018972
+state_IA: 0.0
+state_ID: 0.028080529385634125
+state_IL: 0.0
+state_IN: 0.013498105555639002
+state_KS: 0.006065342169942751
+state_KY: 0.05858800457282567
+state_LA: 0.0
+state_MA: 0.003908392970629733
+state_MD: 0.0
+state_ME: 0.0
+state_MI: 0.0013953609038783992
+state_MN: 0.0
+state_MO: 0.007205959480131739
+state_MS: 0.0
+state_MT: 0.0
+state_NC: 0.033791718553756234
+state_ND: 0.0
+state_NE: 0.0
+state_NH: 0.0
+state_NJ: 0.0
+state_NM: 0.01067982438433059
+state_NV: 0.0
+state_NY: 0.06593406748705495
+state_OH: 0.031692624435230445
+state_OK: 0.0
+state_OR: 0.03300806151113733
+state_PA: 0.054219960567253485
+state_RI: 0.0037190333771412844
+state_SC: 0.0
+state_SD: 0.01949416219549361
+state_TN: 0.010503290186534541
+state_TX: 0.0016785396099855182
+state_UT: 0.0
+state_VA: 0.0017284335311790735
+state_VT: 0.016288165486824446
+state_WA: 0.0
+state_WI: 0.0
+state_WV: 0.0033048284100742537
+state_WY: 0.0
+job_Accountant, chartered: 0.0
+job_Accountant, chartered certified: 0.0
+job_Accountant, chartered public finance: 0.00215159563068584
+job_Accounting technician: 0.0022630766319979238
+job_Acupuncturist: 0.0018502964519593239
+job_Administrator: 0.015286479821002149
+job_Administrator, arts: 0.0
+job_Administrator, charities/voluntary organisations: 0.00018614144553905313
+job_Administrator, education: 0.00028098994466723093
+job_Administrator, local government: 0.0
+job_Advertising account executive: 0.0014043741557429625
+job_Advertising account planner: 0.0
+job_Advertising copywriter: 0.0
+job_Advice worker: 0.0011141525663320203
+job_Aeronautical engineer: 0.002920341775140651
+job_Agricultural consultant: 0.0037736219146620835
+job_Aid worker: 0.020278104520852172
+job_Air broker: 0.0010338460937459968
+job_Air cabin crew: 0.0007403463225762574
+job_Air traffic controller: 0.0
+job_Airline pilot: 0.0
+job_Ambulance person: 0.0
+job_Amenity horticulturist: 0.0
+job_Analytical chemist: 0.0022114546000005396
+job_Animal nutritionist: 0.0007139731490001496
+job_Animal technologist: 0.0
+job_Animator: 0.0023740369683916125
+job_Applications developer: 0.0
+job_Arboriculturist: 0.02685262728126902
+job_Archaeologist: 0.02025417507932564
+job_Architect: 0.0
+job_Architectural technologist: 0.0
+job_Archivist: 0.0
+job_Armed forces logistics/support/administrative officer: 0.0
+job_Armed forces technical officer: 0.0
+job_Armed forces training and education officer: 0.0010039159376080751
+job_Art gallery manager: 0.0
+job_Art therapist: 0.01388997601190568
+job_Artist: 0.0
+job_Arts development officer: 0.0
+job_Associate Professor: 0.0
+job_Audiological scientist: 0.002543783002550655
+job_Barista: 0.0
+job_Barrister: 0.0
+job_Barrister's clerk: 0.0
+job_Biochemist, clinical: 0.0
+job_Biomedical engineer: 0.008115120554844953
+job_Biomedical scientist: 0.0
+job_Bookseller: 0.0
+job_Broadcast engineer: 0.0002408187744680973
+job_Broadcast journalist: 0.0
+job_Broadcast presenter: 0.0
+job_Building control surveyor: 0.029225241101368742
+job_Building services engineer: 0.0
+job_Building surveyor: 0.0005761803678812207
+job_Buyer, industrial: 0.004957681414682696
+job_Buyer, retail: 0.0006501492210469128
+job_Cabin crew: 0.0
+job_Call centre manager: 0.002091759179229216
+job_Camera operator: 0.0
+job_Careers adviser: 0.0
+job_Careers information officer: 0.00297963346557867
+job_Cartographer: 0.003517724249380632
+job_Catering manager: 0.0
+job_Ceramics designer: 0.01748223955862255
+job_Charity fundraiser: 0.0032366065679007385
+job_Charity officer: 0.0
+job_Chartered accountant: 0.0
+job_Chartered legal executive (England and Wales): 0.0
+job_Chartered loss adjuster: 0.0003779411826059572
+job_Chartered public finance accountant: 0.037033911801963776
+job_Chemical engineer: 0.0
+job_Chemist, analytical: 0.0
+job_Chief Executive Officer: 0.008123252365322717
+job_Chief Financial Officer: 0.0
+job_Chief Marketing Officer: 0.0009392517459952164
+job_Chief Operating Officer: 0.0
+job_Chief Strategy Officer: 0.003332441509098816
+job_Chief Technology Officer: 0.003977107193700703
+job_Chief of Staff: 0.0
+job_Child psychotherapist: 0.0037424024633040025
+job_Chiropodist: 0.004258643308760223
+job_Civil Service administrator: 0.01423677595950052
+job_Civil Service fast streamer: 0.004322480796385576
+job_Civil engineer, contracting: 0.0
+job_Claims inspector/assessor: 0.002987321521432822
+job_Clinical biochemist: 0.0
+job_Clinical cytogeneticist: 0.0
+job_Clinical psychologist: 0.0
+job_Clinical research associate: 0.0
+job_Clothing/textile technologist: 0.0
+job_Colour technologist: 0.007707852299062875
+job_Commercial horticulturist: 0.0019791933091048617
+job_Commercial/residential surveyor: 0.0
+job_Commissioning editor: 0.0008186173142262242
+job_Communications engineer: 0.001993696854086411
+job_Community arts worker: 0.0
+job_Community development worker: 0.018111677645316113
+job_Community education officer: 0.0
+job_Community pharmacist: 0.0
+job_Company secretary: 0.0
+job_Comptroller: 0.0
+job_Conservation officer, historic buildings: 0.007330892614856921
+job_Conservator, furniture: 0.0
+job_Conservator, museum/gallery: 0.0
+job_Contracting civil engineer: 0.0
+job_Contractor: 0.002684873894794667
+job_Control and instrumentation engineer: 0.008585369164993903
+job_Copy: 0.0
+job_Copywriter, advertising: 0.0
+job_Corporate investment banker: 0.0
+job_Counselling psychologist: 0.0
+job_Counsellor: 0.007384952525517163
+job_Curator: 0.00420139533124088
+job_Cytogeneticist: 0.0006627709704579969
+job_Dance movement psychotherapist: 0.0
+job_Dancer: 0.0
+job_Data scientist: 0.0
+job_Database administrator: 0.0
+job_Dealer: 0.0
+job_Designer, ceramics/pottery: 0.008392610737839083
+job_Designer, exhibition/display: 0.0
+job_Designer, furniture: 0.04647487654539459
+job_Designer, industrial/product: 0.008097748842871434
+job_Designer, interior/spatial: 0.0
+job_Designer, jewellery: 0.0
+job_Designer, multimedia: 0.0061867661430142495
+job_Designer, television/film set: 0.004231113664504767
+job_Designer, textile: 0.0
+job_Development worker, community: 0.0015692625454599971
+job_Development worker, international aid: 0.0
+job_Diagnostic radiographer: 0.013193402616053456
+job_Dispensing optician: 0.009624527765187237
+job_Doctor, general practice: 0.0007751758399873407
+job_Doctor, hospital: 0.011020079248928328
+job_Drilling engineer: 0.00393725807278434
+job_Early years teacher: 0.014842864691651421
+job_Ecologist: 0.0021655962077691228
+job_Economist: 0.0008510111830165701
+job_Editor, commissioning: 0.0
+job_Editor, film/video: 0.0
+job_Editor, magazine features: 0.0
+job_Education administrator: 0.0
+job_Education officer, community: 0.0
+job_Education officer, museum: 0.007397966680899234
+job_Educational psychologist: 0.023125745624790507
+job_Electrical engineer: 0.003939169502644928
+job_Electronics engineer: 0.0
+job_Embryologist, clinical: 0.0
+job_Emergency planning/management officer: 0.0
+job_Energy engineer: 0.002223717229926304
+job_Energy manager: 0.005954386021535723
+job_Engineer, aeronautical: 0.0
+job_Engineer, agricultural: 0.0
+job_Engineer, automotive: 0.0
+job_Engineer, biomedical: 0.003169583806003199
+job_Engineer, broadcasting (operations): 0.0
+job_Engineer, building services: 0.0
+job_Engineer, civil (consulting): 0.0
+job_Engineer, civil (contracting): 0.0026471131857511484
+job_Engineer, communications: 0.005694927591366774
+job_Engineer, control and instrumentation: 0.03183730098619707
+job_Engineer, drilling: 0.0
+job_Engineer, electronics: 0.0014734776681465448
+job_Engineer, land: 0.00551852032424867
+job_Engineer, maintenance: 0.005125217789901457
+job_Engineer, manufacturing: 0.0
+job_Engineer, materials: 0.0
+job_Engineer, mining: 0.04662999523365235
+job_Engineer, petroleum: 0.00234602274274409
+job_Engineer, production: 0.001377079659887378
+job_Engineer, site: 0.0
+job_Engineer, structural: 0.0
+job_Engineer, technical sales: 0.0
+job_Engineering geologist: 0.0
+job_English as a foreign language teacher: 0.001124788473241489
+job_English as a second language teacher: 0.0
+job_Environmental consultant: 0.019539633878130278
+job_Environmental education officer: 0.0
+job_Environmental health practitioner: 0.0
+job_Environmental manager: 0.0
+job_Equality and diversity officer: 0.0
+job_Equities trader: 0.0
+job_Estate manager/land agent: 0.0
+job_Event organiser: 0.0
+job_Exercise physiologist: 0.001265668159541697
+job_Exhibition designer: 0.0
+job_Exhibitions officer, museum/gallery: 0.005152419245959928
+job_Facilities manager: 0.0017010294756979742
+job_Farm manager: 0.0
+job_Field seismologist: 0.0
+job_Field trials officer: 0.0008193388802505068
+job_Film/video editor: 0.0
+job_Financial adviser: 0.00443046647046611
+job_Financial trader: 0.019922137412597355
+job_Fine artist: 0.006988816048242418
+job_Firefighter: 0.010679841681093307
+job_Fisheries officer: 0.0
+job_Fitness centre manager: 0.0006297355611628982
+job_Forensic psychologist: 0.006731951566505704
+job_Forest/woodland manager: 0.0006902772084401479
+job_Freight forwarder: 0.0
+job_Furniture conservator/restorer: 0.0019241388704536162
+job_Furniture designer: 0.0
+job_Further education lecturer: 0.002323711151719101
+job_Futures trader: 0.0019382702095100536
+job_Gaffer: 0.0
+job_Garment/textile technologist: 0.0
+job_General practice doctor: 0.03306184598180589
+job_Geneticist, molecular: 0.01474570610544707
+job_Geochemist: 0.0
+job_Geologist, engineering: 0.0065109362476694806
+job_Geologist, wellsite: 0.0
+job_Geophysicist/field seismologist: 0.004465253150498103
+job_Geoscientist: 0.0
+job_Glass blower/designer: 0.0
+job_Health and safety adviser: 0.0
+job_Health physicist: 0.005078043003959319
+job_Health promotion specialist: 0.0
+job_Health service manager: 0.001409130376699838
+job_Health visitor: 0.0
+job_Herbalist: 0.005723313957130391
+job_Heritage manager: 0.0058427949697594924
+job_Herpetologist: 0.0007908029502844575
+job_Higher education careers adviser: 0.005060195277880458
+job_Historic buildings inspector/conservation officer: 0.0
+job_Homeopath: 0.0003871843908933359
+job_Horticultural consultant: 0.0
+job_Horticultural therapist: 0.0
+job_Horticulturist, commercial: 0.0
+job_Hospital doctor: 0.00944919341069423
+job_Hospital pharmacist: 0.0
+job_Hotel manager: 0.0
+job_Human resources officer: 0.0
+job_Hydrogeologist: 0.0
+job_Hydrographic surveyor: 0.010805308803132971
+job_Hydrologist: 0.0029711950046447592
+job_IT consultant: 0.0
+job_IT trainer: 0.0011215548629546698
+job_Illustrator: 0.0
+job_Immigration officer: 0.0
+job_Immunologist: 0.0
+job_Industrial buyer: 0.0
+job_Industrial/product designer: 0.0
+job_Information officer: 0.0
+job_Information systems manager: 0.0
+job_Insurance broker: 0.0019327027440721471
+job_Insurance claims handler: 0.0
+job_Insurance risk surveyor: 0.0
+job_Insurance underwriter: 0.009194969459320771
+job_Intelligence analyst: 0.0
+job_Interior and spatial designer: 0.0
+job_Interpreter: 0.006913182388782323
+job_Investment analyst: 0.0
+job_Investment banker, corporate: 0.0007445307372889085
+job_Investment banker, operational: 0.0
+job_Jewellery designer: 0.0
+job_Journalist, newspaper: 0.0
+job_Land: 0.0
+job_Land/geomatics surveyor: 0.0
+job_Landscape architect: 0.0
+job_Lawyer: 0.00195294724430017
+job_Learning disability nurse: 0.002816764869724093
+job_Learning mentor: 0.0
+job_Lecturer, further education: 0.0
+job_Lecturer, higher education: 0.0
+job_Legal secretary: 0.0012794087686527655
+job_Leisure centre manager: 0.007965587497402504
+job_Lexicographer: 0.0016783002439590866
+job_Librarian, academic: 0.0
+job_Librarian, public: 0.021632285716412833
+job_Licensed conveyancer: 0.007230656420666029
+job_Local government officer: 0.0
+job_Location manager: 0.0026025888849735496
+job_Logistics and distribution manager: 0.014917258148229067
+job_Loss adjuster, chartered: 0.0
+job_Magazine features editor: 0.0056069858484132425
+job_Magazine journalist: 0.0018122637594948652
+job_Maintenance engineer: 0.0015599665597914017
+job_Make: 0.0026795204589517086
+job_Management consultant: 0.0011255672346433677
+job_Manufacturing engineer: 0.0
+job_Manufacturing systems engineer: 0.004366621465837469
+job_Market researcher: 0.0
+job_Marketing executive: 0.0
+job_Materials engineer: 0.0027891584782011717
+job_Mechanical engineer: 0.004904073279501681
+job_Media buyer: 0.00041040210730046856
+job_Media planner: 0.0009925654556552884
+job_Medical physicist: 0.0
+job_Medical sales representative: 0.0
+job_Medical secretary: 0.0
+job_Medical technical officer: 0.008211330932180887
+job_Mental health nurse: 0.0022986452990884044
+job_Merchandiser, retail: 0.004132030775835817
+job_Metallurgist: 0.0
+job_Minerals surveyor: 0.0
+job_Mining engineer: 0.0
+job_Mudlogger: 0.0
+job_Multimedia programmer: 0.002090683859377323
+job_Museum education officer: 0.00036769786991744136
+job_Museum/gallery conservator: 0.004481242671919072
+job_Museum/gallery exhibitions officer: 0.0
+job_Music therapist: 0.0
+job_Music tutor: 0.0006209152556873891
+job_Musician: 0.012195698538044211
+job_Nature conservation officer: 0.0002622493032768101
+job_Naval architect: 0.017181224851990088
+job_Network engineer: 0.0028114527409266736
+job_Neurosurgeon: 0.007640453901367444
+job_Nurse, children's: 0.0
+job_Nurse, mental health: 6.850268622613072e-05
+job_Nutritional therapist: 0.0
+job_Occupational hygienist: 0.0
+job_Occupational psychologist: 0.0033915448436615467
+job_Occupational therapist: 0.0
+job_Oceanographer: 0.0
+job_Oncologist: 0.0
+job_Operational researcher: 0.0025925778242623645
+job_Operations geologist: 0.0
+job_Optician, dispensing: 0.0004797977582101361
+job_Optometrist: 0.0
+job_Orthoptist: 0.010159054000211148
+job_Osteopath: 0.0002582755059531781
+job_Outdoor activities/education manager: 0.0
+job_Paediatric nurse: 0.01891139451492909
+job_Paramedic: 0.0037870937361355996
+job_Patent attorney: 0.01237496127893115
+job_Pathologist: 0.011105840603072658
+job_Pension scheme manager: 0.003930454162201244
+job_Pensions consultant: 0.005496263087093748
+job_Personnel officer: 0.002565588027867237
+job_Petroleum engineer: 0.01787168744480949
+job_Pharmacist, community: 0.0
+job_Pharmacist, hospital: 0.0
+job_Pharmacologist: 0.002929112179920019
+job_Physicist, medical: 0.0033370344751310703
+job_Physiological scientist: 0.002051809629101259
+job_Physiotherapist: 0.006580488786656097
+job_Phytotherapist: 0.011037060679162086
+job_Pilot, airline: 0.0
+job_Planning and development surveyor: 0.0
+job_Plant breeder/geneticist: 0.0
+job_Podiatrist: 0.0
+job_Police officer: 0.0025176052185045673
+job_Politician's assistant: 0.0
+job_Presenter, broadcasting: 0.0
+job_Press photographer: 0.0
+job_Press sub: 0.0
+job_Primary school teacher: 0.0
+job_Prison officer: 0.0
+job_Private music teacher: 0.013523363343377736
+job_Probation officer: 0.007005712691396259
+job_Producer, radio: 0.004248231355607335
+job_Producer, television/film/video: 0.0
+job_Product designer: 0.0
+job_Product manager: 0.0
+job_Product/process development scientist: 0.002074698158326682
+job_Production assistant, radio: 0.004872779275922412
+job_Production assistant, television: 0.0
+job_Production engineer: 0.0
+job_Production manager: 0.0
+job_Professor Emeritus: 0.0
+job_Programme researcher, broadcasting/film/video: 0.0
+job_Programmer, applications: 0.0
+job_Programmer, multimedia: 0.0
+job_Psychiatric nurse: 0.0
+job_Psychiatrist: 0.0005066667753974911
+job_Psychologist, clinical: 0.001632223130565785
+job_Psychologist, counselling: 0.0
+job_Psychologist, forensic: 0.004041437257878132
+job_Psychologist, sport and exercise: 0.0023265310326644113
+job_Psychotherapist: 0.004634698128585434
+job_Psychotherapist, child: 0.004095019550925805
+job_Public affairs consultant: 0.006288448331049088
+job_Public house manager: 0.0
+job_Public librarian: 0.0
+job_Public relations account executive: 0.0
+job_Public relations officer: 0.00047285623520496674
+job_Purchasing manager: 0.0
+job_Quantity surveyor: 0.0034081675823215366
+job_Quarry manager: 0.0
+job_Race relations officer: 0.0
+job_Radio broadcast assistant: 0.0
+job_Radio producer: 0.011650963949171783
+job_Radiographer, diagnostic: 0.0035092005675967956
+job_Radiographer, therapeutic: 0.0
+job_Records manager: 0.008604933087066998
+job_Regulatory affairs officer: 0.003243535800160127
+job_Research officer, political party: 0.003050067381415756
+job_Research officer, trade union: 0.019443680791318533
+job_Research scientist (life sciences): 0.0
+job_Research scientist (maths): 0.006099992019408357
+job_Research scientist (medical): 0.0
+job_Research scientist (physical sciences): 0.05148040372878923
+job_Restaurant manager, fast food: 0.0
+job_Retail banker: 0.0
+job_Retail buyer: 0.0
+job_Retail manager: 0.0026494211425979602
+job_Retail merchandiser: 0.006174614216649803
+job_Risk analyst: 0.017084855774098708
+job_Rural practice surveyor: 0.0
+job_Sales executive: 0.0
+job_Sales professional, IT: 0.0
+job_Sales promotion account executive: 0.0
+job_Science writer: 0.01758224010753885
+job_Scientific laboratory technician: 0.0
+job_Scientist, audiological: 0.014541954537788098
+job_Scientist, biomedical: 0.0
+job_Scientist, clinical (histocompatibility and immunogenetics): 0.00017911934414002354
+job_Scientist, marine: 0.0
+job_Scientist, physiological: 5.167198152539517e-05
+job_Scientist, research (maths): 0.01832746481679703
+job_Scientist, research (medical): 0.0005326140451288646
+job_Scientist, research (physical sciences): 0.006308371776131194
+job_Secondary school teacher: 0.03163558235315476
+job_Secretary/administrator: 0.0
+job_Seismic interpreter: 0.0
+job_Senior tax professional/tax inspector: 0.0
+job_Set designer: 0.001265779421010437
+job_Ship broker: 0.0
+job_Site engineer: 0.0034281727519040505
+job_Social research officer, government: 0.00015431124263047484
+job_Social researcher: 0.0
+job_Soil scientist: 0.008334479827574107
+job_Solicitor: 0.002127315181815791
+job_Solicitor, Scotland: 0.0
+job_Special educational needs teacher: 0.0
+job_Special effects artist: 0.0
+job_Sport and exercise psychologist: 0.0
+job_Sports administrator: 0.0
+job_Sports development officer: 0.014925271696142717
+job_Stage manager: 0.0
+job_Statistician: 0.002174796967821198
+job_Structural engineer: 0.0
+job_Sub: 0.0
+job_Surgeon: 0.0007909744272153577
+job_Surveyor, hydrographic: 0.0
+job_Surveyor, land/geomatics: 0.008821808091282317
+job_Surveyor, minerals: 0.002421757729121475
+job_Surveyor, mining: 0.0
+job_Surveyor, rural practice: 0.012195075833581719
+job_Systems analyst: 0.0006562598475214413
+job_Systems developer: 0.007011373077394704
+job_TEFL teacher: 0.0
+job_Tax adviser: 0.004662210477733009
+job_Tax inspector: 0.00229856991161078
+job_Teacher, English as a foreign language: 0.01550930559829211
+job_Teacher, adult education: 0.0
+job_Teacher, early years/pre: 0.008464514243743905
+job_Teacher, primary school: 0.0
+job_Teacher, secondary school: 0.0022867377628638043
+job_Teacher, special educational needs: 0.009386375923179074
+job_Teaching laboratory technician: 0.0
+job_Technical brewer: 0.016736375475582117
+job_Telecommunications researcher: 0.004756501508037732
+job_Television camera operator: 0.0014108082573772768
+job_Television floor manager: 0.0
+job_Television production assistant: 0.008624884460920367
+job_Television/film/video producer: 0.0
+job_Textile designer: 0.0
+job_Theatre director: 0.002121100779058859
+job_Theatre manager: 0.0005158988339355184
+job_Theme park manager: 0.010261557442104781
+job_Therapist, art: 0.005896522443111686
+job_Therapist, drama: 0.004499303939459919
+job_Therapist, horticultural: 0.0
+job_Therapist, music: 0.00021327982095563285
+job_Therapist, occupational: 0.0
+job_Therapist, sports: 0.0028898960417191692
+job_Tour manager: 0.0
+job_Tourism officer: 0.0
+job_Tourist information centre manager: 0.0
+job_Town planner: 0.006862654609308055
+job_Toxicologist: 0.002069116450605567
+job_Trade mark attorney: 0.0
+job_Trading standards officer: 0.0
+job_Training and development officer: 0.013554481033526057
+job_Transport planner: 0.004265032567665852
+job_Travel agency manager: 0.0
+job_Tree surgeon: 0.0
+job_Veterinary surgeon: 0.0
+job_Video editor: 0.0021434803551543375
+job_Visual merchandiser: 0.0
+job_Volunteer coordinator: 0.0
+job_Warden/ranger: 0.010908563056851336
+job_Warehouse manager: 0.0
+job_Waste management officer: 0.005220026112418379
+job_Water engineer: 0.0
+job_Water quality scientist: 0.0003481046971976168
+job_Web designer: 0.005729600379675557
+job_Wellsite geologist: 0.005707039272831005
+job_Writer: 0.01000955265536383
+trans_hour_1: 0.244833704470403
+trans_hour_2: 0.2612428880469651
+trans_hour_3: 0.2491544591222482
+trans_hour_4: 0.0
+trans_hour_5: 0.006295506116060076
+trans_hour_6: 0.0633243211489732
+trans_hour_7: 0.12728192877922537
+trans_hour_8: 0.0057329303010955806
+trans_hour_9: 0.0
+trans_hour_10: 0.0525222844259788
+trans_hour_11: 0.0
+trans_hour_12: 0.05452264858981235
+trans_hour_13: 0.07944430660182104
+trans_hour_14: 0.0314462979867942
+trans_hour_15: 0.005593261143487975
+trans_hour_16: 0.0573420318906408
+trans_hour_17: 0.018391977257325675
+trans_hour_18: 0.017055995863823833
+trans_hour_19: 0.07113308510789944
+trans_hour_20: 0.26494562027416274
+trans_hour_21: 0.04559693229792703
+trans_hour_22: 2.5765299992550625
+trans_hour_23: 2.9296194904011887
+trans_dow_1: 0.182173836393622
+trans_dow_2: 0.0866124618140835
+trans_dow_3: 0.08719850099272206
+trans_dow_4: 0.03645536181853989
+trans_dow_5: 0.05597704780206516
+trans_dow_6: 0.16499587089495274
