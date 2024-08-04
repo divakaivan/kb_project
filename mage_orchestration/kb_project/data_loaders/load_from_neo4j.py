@@ -17,14 +17,14 @@ def load_data(*args, **kwargs):
         # Query for CreditCard nodes
         cc_query = """
         MATCH (c:CreditCard)
-        RETURN c.cc_num AS cc_num, c.lat AS lat, c.long AS long
+        RETURN c.cc_num as cc_num, c.city as city, c.state as state, c.job as job
         """
         credit_card_nodes = pd.DataFrame([dict(record) for record in session.run(cc_query)])
         
         # Query for Merchant nodes
         merchant_query = """
         MATCH (m:Merchant)
-        RETURN m.name AS merchant, m.merch_lat AS merch_lat, m.merch_long AS merch_long
+        RETURN m.name AS merchant
         """
         merchant_nodes = pd.DataFrame([dict(record) for record in session.run(merchant_query)])
         
