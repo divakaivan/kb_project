@@ -24,6 +24,23 @@ Created using [arrows.app](https://arrows.app/)
 
 To simulate real-time information, we use the Kaggle `fraudTest.csv` dataset and send 5 transactions every second through Kafka. The transactions are received and new columns, where the models predict not fraud/fraud, are created. This data is sent to neo4j and used in the Grafana dashboard, which updates every 5 seconds with the latest information. 
 
+# Monitoring
+
+Information from Neo4j is extracted and visualised through a real-time dashboard in Grafana
+
+![grafana-dashboard](project-info/grafana-dashboard.png)
+
+# Model decision-making
+
+To better understand what factors influence a model's decision to classify a transaction as not fraud or fraud, a model dictionary hosted on Streamlit is set up. Information that can be seen:
+* model location/information
+* feature importance
+* model metrics
+* confusion matrix
+* SHAP summary plot
+
+![model-dict](project-info/model-dict.png)
+
 # Reproducability
 
 TODO
@@ -38,3 +55,4 @@ TODO
     * Grafana
 * Deploy Streamlit for improved accessibility
 * Add unit/integration tests
+* Load models from Mlflow in the model dictionary
