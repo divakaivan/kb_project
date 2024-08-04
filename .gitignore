@@ -4,7 +4,7 @@ neo4j_db
 kafka-producer/data_to_stream.csv
 mage_orchestration/kaggle.json
 catboost_info
-
+*.npy
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
