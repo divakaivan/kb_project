@@ -46,11 +46,11 @@ To better understand what factors influence a model's decision to classify a tra
 **Prerequisite**
 * Docker desktop
 * Python >=3.9
-* Kaggle API credentials placed in `mage_orchestration` as `kaggle.json`
 
 **Setup**
 1. clone the repo `https://github.com/divakaivan/kb_project.git`
-2. type `make` in the terminal and you should see something like
+2. Place your Kaggle API credentials in `mage_orchestration` as `kaggle.json`
+3. type `make` in the terminal and you should see something like
 ```
 Usage: make [option]
 
@@ -61,8 +61,8 @@ Options:
   model-dict           Create model dictionary UI
   stop                 Stop docker services
 ```
-3. Start with `make build` to build all the docker services from `docker-compose.yaml`
-4. Next, run `make start` to start all the built docker services (to stop them, run `make stop`)
+4. Start with `make build` to build all the docker services from `docker-compose.yaml`
+5. Next, run `make start` to start all the built docker services (to stop them, run `make stop`)
 
 **Training models**
 1. Go to Mage, which is running on http://localhost:6789, go to the Pipelines page from the sidebar
