@@ -43,7 +43,45 @@ To better understand what factors influence a model's decision to classify a tra
 
 # Reproducability
 
-TODO
+**Prerequisite**
+* Docker desktop
+* Python >=3.9
+* Kaggle API credentials placed in `mage_orchestration` as `kaggle.json`
+
+**Setup**
+1. clone the repo `https://github.com/divakaivan/kb_project.git`
+2. type `make` in the terminal and you should see something like
+```
+Usage: make [option]
+
+Options:
+  help                 Show this help message
+  build                Build docker services
+  start                Start docker services (detached mode)
+  model-dict           Create model dictionary UI
+  stop                 Stop docker services
+```
+3. Start with `make build` to build all the docker services from `docker-compose.yaml`
+4. Next, run `make start` to start all the built docker services (to stop them, run `make stop`)
+
+**Training models**
+1. Go to Mage, which is running on http://localhost:6789
+2. Start with the `get_kaggle_data` pipeline to download the data from Kaggle
+3. Then, run `load_batch_into_neo4j`
+4. Run one (or multiple) of the `train_*` pipeline
+
+**Real-time transaction processing**
+1. You need to have run at least one of the `train_*` pipelines
+2. When you ran `make start` the kafka-producer service started sending transactions, so now if you run the `stream_predictions` pipeline, in the bottom right corner you should see transactions being processed. Also new transactions loaded into neo4j can be seen (due the to TRANSACTION number increasing). The dataset used in the kafka-producer service has >500,000 rows so if you leave it to run it will keep sending data for more than 30 hours (5 transactions sent per second)
+
+**Monitoring**
+1. Once the `stream_predictions` pipeline is running in Mage, you can open Grafana at http://localhost:3000
+2. The connection to neo4j and dashboard is pre-loaded, so you can directly go to the Dashboards section
+
+**Model dictionary**
+- Seeing something here requires for at least 1 of the `train_*` pipelines in mage to have been run
+- In the terminal, run `make model-dict`. This will install the necessary denepdencies and open up the Streamlit UI in your browser (alternatively, go to http://localhost:8501)
+
 
 # Future improvements
 
