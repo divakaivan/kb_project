@@ -48,9 +48,9 @@ To better understand what factors influence a model's decision to classify a tra
 * Python >=3.9
 
 **Setup**
-1. clone the repo `https://github.com/divakaivan/kb_project.git`
+1. Clone the repo `https://github.com/divakaivan/kb_project.git`
 2. Place your Kaggle API credentials in `mage_orchestration` as `kaggle.json`
-3. type `make` in the terminal and you should see something like
+3. Type `make` in the terminal and you should see something like
 ```
 Usage: make [option]
 
