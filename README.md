@@ -65,7 +65,7 @@ Options:
 4. Next, run `make start` to start all the built docker services (to stop them, run `make stop`)
 
 **Training models**
-1. Go to Mage, which is running on http://localhost:6789
+1. Go to Mage, which is running on http://localhost:6789, go to the Pipelines page from the sidebar
 2. Start with the `get_kaggle_data` pipeline to download the data from Kaggle
 3. Then, run `load_batch_into_neo4j`
 4. Run one (or multiple) of the `train_*` pipeline
