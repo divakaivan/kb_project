@@ -6,7 +6,10 @@ import pandas as pd
 
 time.sleep(10) # Wait for Kafka to start
 
-streaming_df = pd.read_csv('data_to_stream.csv', index_col=0)
+# loading the dataset from a remote repository for reproducability 
+# no not need to download and place it manually in the kafka-producer folder
+dataset_url = 'https://huggingface.co/datasets/divakaivan/kb_project_data_to_stream/resolve/main/data_to_stream.csv'
+streaming_df = pd.read_csv(dataset_url, index_col=0)
 
 producer = KafkaProducer(
     bootstrap_servers='kafka:9092',
@@ -32,7 +35,7 @@ def publish_messages():
         current_index = 0
 
 if __name__ == '__main__':
-
+    time.sleep(10)
     schedule.every(1).seconds.do(publish_messages)
     while True:
         schedule.run_pending()
