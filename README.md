@@ -79,8 +79,8 @@ Options:
 2. The connection to neo4j and dashboard is pre-loaded, so you can directly go to the Dashboards section
 
 **Model dictionary**
+- There are some models already in the repository, so you can run `make model-dict` in the terminal. This will install the necessary denepdencies and open up the Streamlit UI in your browser (alternatively, go to http://localhost:8501)
 - Seeing something here requires for at least 1 of the `train_*` pipelines in mage to have been run
-- In the terminal, run `make model-dict`. This will install the necessary denepdencies and open up the Streamlit UI in your browser (alternatively, go to http://localhost:8501)
 
 
 # Future improvements
