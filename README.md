@@ -28,7 +28,12 @@ Created using [arrows.app](https://arrows.app/)
 
 # Real-time inference pipeline
 
-To simulate real-time information, we use the Kaggle `fraudTest.csv` dataset and send 5 transactions every second through Kafka. The transactions are received and new columns, where the models predict not fraud/fraud, are created. This data is sent to neo4j and used in the Grafana dashboard, which updates every 5 seconds with the latest information. 
+To simulate real-time information, we use the Kaggle `fraudTest.csv` dataset and send 5 transactions every second through Kafka. The transactions are received and new columns, where the models predict not fraud/fraud, are created. This data is sent to neo4j and used in the Grafana dashboard, which updates every 5 seconds with the latest information
+
+### Models used for inference:
+- Graph Convolutional Network - Accuracy: 0.8809, Precision: 0.8133, Recall: 0.9883, F1: 0.8923
+- XGBoost - Accuracy: 0.9730, Precision: 0.9737, Recall: 0.9717, F1: 0.9727
+- CatBoost - Accuracy: 0.9759, Precision: 0.9757, Recall: 0.9757, F1: 0.9757
 
 # Monitoring
 
@@ -109,3 +114,4 @@ Options:
 * Deploy Streamlit for improved accessibility
 * Add unit/integration tests
 * Load models from Mlflow in the model dictionary
+* Improve monitoring
