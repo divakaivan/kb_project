@@ -1,6 +1,10 @@
 # Project overview
 
-![project-overview](project-info/project-overview.drawio.png)
+![project-overview](project-info/ml-canvas-info.png)
+
+# Architecture overview
+
+![architecture-overview](project-info/project-overview.drawio.png)
 
 Created using [draw.io](https://draw.io/)
 
