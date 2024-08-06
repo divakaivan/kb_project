@@ -8,6 +8,5 @@ RUN set -ex; \
 WORKDIR /
 
 ADD write_to_kafka.py .
-ADD fraudTest.csv .
 
 CMD python -u write_to_kafka.py

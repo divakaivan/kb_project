@@ -1,6 +1,12 @@
 # Project overview
 
-![project-overview](project-info/project-overview.drawio.png)
+![project-overview](project-info/ml-canvas-info.png)
+
+Created using [ownml.co](https://www.ownml.co/)
+
+# Architecture overview
+
+![architecture-overview](project-info/project-overview.drawio.png)
 
 Created using [draw.io](https://draw.io/)
 
@@ -79,9 +85,18 @@ Options:
 2. The connection to neo4j and dashboard is pre-loaded, so you can directly go to the Dashboards section
 
 **Model dictionary**
+- There are some models already in the repository, so you can run `make model-dict` in the terminal. This will install the necessary denepdencies and open up the Streamlit UI in your browser (alternatively, go to http://localhost:8501)
 - Seeing something here requires for at least 1 of the `train_*` pipelines in mage to have been run
-- In the terminal, run `make model-dict`. This will install the necessary denepdencies and open up the Streamlit UI in your browser (alternatively, go to http://localhost:8501)
 
+**Docker Services Information**
+| Service   | Port |
+|-----------|------|
+| neo4j     | 7474/7687 |
+| mage      | 6789 |
+| kafka     | 9093 |
+| zookeeper | 2181 |
+| mlflow    | 5001 |
+| grafana   | 3000 |
 
 # Future improvements
 
