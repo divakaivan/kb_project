@@ -1,6 +1,6 @@
 # 국민은행 AI 대회 프로젝트: 실시간 그래프 DB 분석을 통한 사기 탐지
 
-![project-overview](project-info/ml-canvas-info.png)
+![project-overview](project-info/ml-canvas-info-kr.png)
 
 참고: [ownml.co](https://www.ownml.co/) 
 
@@ -23,7 +23,7 @@
 
 # 데이터 설명
 
-![data-description](project-info/data-description.png)
+![data-description](project-info/data-description-kr.png)
 
 참고: [arrows.app](https://arrows.app/)
 
