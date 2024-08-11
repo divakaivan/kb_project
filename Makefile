@@ -13,11 +13,11 @@ help:  ## Show this help message
 
 .PHONY: build
 build:  ## Build docker services
-	docker-compose -f $(DOCKER_COMPOSE_FILE) build
+	docker compose -f $(DOCKER_COMPOSE_FILE) build
 
 .PHONY: start
 start:  ## Start docker services (detached mode)
-	docker-compose -f $(DOCKER_COMPOSE_FILE) up -d
+	docker compose -f $(DOCKER_COMPOSE_FILE) up -d
 
 .PHONY: model-dict
 model-dict:  ## Create model dictionary UI
