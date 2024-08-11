@@ -89,7 +89,7 @@ Options:
 2. `make start`를 실행할 때 kafka-producer 서비스가 트랜잭션 전송을 시작했으므로, 이제 `stream_predictions` 파이프라인을 실행하면 오른쪽 하단에서 트랜잭션이 처리되는 것을 볼 수 있습니다. 또한 neo4j에 새 트랜잭션이 로드되는 것을 확인할 수 있습니다 (TRANSACTION 번호가 증가함에 따라). kafka-producer 서비스에서 사용된 데이터셋에는 500,000개 이상의 행이 포함되어 있어 초당 5개의 트랜잭션이 전송되므로 30시간 이상 데이터를 전송할 수 있습니다.
 
 **모니터링**
-1. Mage에서 `stream_predictions` 파이프라인이 실행 중이면 http://localhost:3000에서 Grafana를 열 수 있습니다.
+1. Mage에서 `stream_predictions` 파이프라인이 실행 중이면 http://localhost:3000에서 (username: `admin` & password: `admin`) Grafana를 열 수 있습니다.
 2. neo4j 및 대시보드와의 연결이 미리 로드되어 있어 대시보드 섹션으로 바로 이동할 수 있습니다.
 
 **모델 사전**
