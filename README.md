@@ -8,6 +8,8 @@
 
 [demo-video](https://github.com/user-attachments/assets/4ae41f85-e186-49c2-8de6-446302fbfd29)
 
+[YouTube](https://youtu.be/uHJ3EclH43A)
+
 # 아키텍처 개요
 
 ![architecture-overview](project-info/project-overview.drawio.png)
