@@ -26,7 +26,7 @@ services:
           - neo4j
 
   magic:
-    image: mageai/mageai:latest
+    image: mageai/mageai:0.9.72
     command: mage start ${PROJECT_NAME}
     env_file:
       - .env
