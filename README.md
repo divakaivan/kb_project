@@ -4,6 +4,10 @@
 
 참고: [ownml.co](https://www.ownml.co/) 
 
+# Demo
+
+[youtube-demo](project-info/demo.mp4)
+
 # 아키텍처 개요
 
 ![architecture-overview](project-info/project-overview.drawio.png)
