@@ -25,4 +25,4 @@ model-dict:  ## Create model dictionary UI
 
 .PHONY: stop
 stop:  ## Stop docker services
-	docker-compose -f $(DOCKER_COMPOSE_FILE) stop
+	docker compose -f $(DOCKER_COMPOSE_FILE) stop
