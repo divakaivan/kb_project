@@ -6,7 +6,7 @@
 
 # Demo
 
-[youtube-demo](project-info/demo.mp4)
+[demo-video](https://github.com/user-attachments/assets/4ae41f85-e186-49c2-8de6-446302fbfd29)
 
 # 아키텍처 개요
 
