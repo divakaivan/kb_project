@@ -1,9 +1,12 @@
-FROM mageai/mageai:latest
+FROM mageai/mageai:0.9.72
 
-ARG USER_CODE_PATH=/home/src/${PROJECT_NAME}
+ARG PROJECT_NAME
+ENV USER_CODE_PATH=/home/src/${PROJECT_NAME}
 
-COPY requirements.txt ${USER_CODE_PATH}/requirements.txt 
+COPY requirements.txt /home/src/${PROJECT_NAME}/requirements.txt
 COPY kaggle.json /root/.kaggle/kaggle.json
 
 RUN pip install -U pip
-RUN pip install -r ${USER_CODE_PATH}/requirements.txt
+
+WORKDIR ${USER_CODE_PATH}
+RUN pip install -r requirements.txt
