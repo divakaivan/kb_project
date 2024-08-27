@@ -1,0 +1,30 @@
+apiVersion: 1
+groups:
+    - orgId: 1
+      name: fraud_alerts_group
+      folder: fraud_alerts
+      interval: 10s
+      rules:
+        - uid: bdvhqum8cvmkgb
+          title: 이상거래 알림
+          condition: A
+          data:
+            - refId: A
+              relativeTimeRange:
+                from: 600
+                to: 0
+              datasourceUid: adt0ai4d35534a
+              model:
+                Format: table
+                cypherQuery: "MATCH ()-[r:TRANSACTION]->()\nWHERE r.pred_gcn_is_fraud IS NOT NULL \n  AND r.pred_xgb_is_fraud IS NOT NULL \n  AND r.pred_catboost_is_fraud IS NOT NULL\n  AND (\n    r.pred_gcn_is_fraud = 1 AND r.pred_xgb_is_fraud = 1 AND r.pred_catboost_is_fraud = 1\n  )\nRETURN count(r.trans_num) as trans_count, r.trans_num as TransactionNumber, r.trans_date_trans_time as TransactionDateTime, toString(r.pred_catboost_is_fraud) AS CATBOOST_PRED, toString(r.pred_gcn_is_fraud) AS GCN_PRED, toString(r.pred_xgb_is_fraud) AS XGB_PRED"
+                intervalMs: 1000
+                maxDataPoints: 43200
+                refId: A
+          noDataState: OK
+          execErrState: OK
+          for: 10s
+          annotations: {}
+          labels: {}
+          isPaused: false
+          notification_settings:
+            receiver: grafana-default-email
