@@ -15,7 +15,7 @@ blocks:
   type: data_loader
   upstream_blocks: []
   uuid: load_from_local
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     file_path: data_exporters/load_to_neo4j.py

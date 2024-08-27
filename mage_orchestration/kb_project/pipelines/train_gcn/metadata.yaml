@@ -10,12 +10,12 @@ blocks:
   language: python
   name: load_from_neo4j
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: data_loader
   upstream_blocks: []
   uuid: load_from_neo4j
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     file_path: transformers/full_model_script.py
