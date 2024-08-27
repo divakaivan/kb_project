@@ -21,7 +21,9 @@ def insert_transaction(tx, row):
             category: $category, 
             trans_num: $trans_num, 
             is_fraud: $is_fraud,
-            pred_gcn_is_fraud: $pred_gcn_is_fraud
+            pred_gcn_is_fraud: $pred_gcn_is_fraud,
+            pred_xgb_is_fraud: $pred_xgb_is_fraud,
+            pred_catboost_is_fraud: $pred_catboost_is_fraud
         }]->(m)
         RETURN t
     """, row)
