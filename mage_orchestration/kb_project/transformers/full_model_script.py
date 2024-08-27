@@ -56,7 +56,7 @@ def compute_time_difference(group):
     return result
 
 def create_folder(name):
-    date_now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    date_now = datetime.now().strftime("%Y%m%d_%H%M%S")
     folder_name = f"models_{name}_{date_now}"
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
