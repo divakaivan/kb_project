@@ -149,5 +149,40 @@ def transform(messages: List[Dict], *args, **kwargs):
         # fake date as if transactions are recent
         now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         msg['trans_date_trans_time'] = now
-        
+
+        if msg['pred_xgb_is_fraud'] == 1 and msg['pred_catboost_is_fraud'] == 1 and msg['pred_gcn_is_fraud'] == 1:
+                kakao_msg = (
+                    f"안녕하세요.\n"
+                    f"KB 국민은행 사기 탐지 팀입니다. 고객님의 계좌에서 의심스러운 거래가 발생했음을 알려드립니다.\n\n"
+                    f"일시: {msg['trans_date_trans_time']}\n"
+                    f"금액: {msg['amt']}$ ({format(int(round(msg['amt'] * 1339.44, 0)), ',')}원)\n"
+                    f"상점: {msg['merchant']}\n\n"
+                    f"거래를 하지 않으셨다면 즉시 \n[국내] : (지역번호 없이) 1588-9999, 1599-9999, 1644-9999 \n[해외] : 02) 6300-9999 (82-2-6300-9999) 연락하시거나, 저희 모바일 앱을 통해 연락해 주시기 바랍니다.\n"
+                    f"이 거래를 인지하셨다면 이 메시지를 무시하셔도 됩니다."
+                )
+
+                import requests
+                import json
+                
+                url = "https://kapi.kakao.com/v1/api/talk/friends/message/default/send"
+                # Requires kakao api application to be set up
+                headers={
+                    "Authorization" : "Bearer " + kwargs['kakao_token']
+                }
+
+                data={
+                    "receiver_uuids": json.dumps([kwargs['user_id']]),
+                    "template_object": json.dumps({
+                        "object_type": "text",
+                        "text": kakao_msg,
+                        "link": {
+                            "web_url": "https://obank.kbstar.com/quics?page=C023171#loading"
+                        }
+                    })
+                }
+
+                response = requests.post(url, headers=headers, data=data)
+
+                print('<<<[이상거래 탐지 알림] 고객님께 알림을 보내 드렸습니다>>>')
+            
     return messages
